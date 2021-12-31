@@ -26,6 +26,7 @@ public class RegistrationPage extends Utils //create class and inherit utils
      By registerButton=By.name("register-button");
      By confirmPassword=By.id("ConfirmPassword");
 
+     By continueButton=By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]/a");
 
 
    public void registrationDetails() // create method for register a details
@@ -50,6 +51,7 @@ public class RegistrationPage extends Utils //create class and inherit utils
    public void clickOnRegisterSubmitButton()
    {
        clickOnElement(registerButton);
+       clickOnElement(continueButton);
    }
 
 

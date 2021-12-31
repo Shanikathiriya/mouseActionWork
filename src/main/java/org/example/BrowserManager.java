@@ -12,7 +12,6 @@ public class BrowserManager extends BasePage // create browser manager class inh
     public void openBrowser()// create method for open browser
     {
 
-
         if(browserName.equalsIgnoreCase("chrome"))
         {
             System.setProperty("webdriver.chrome.driver","src/test/java/Drivers/chromedriver.exe");
@@ -35,6 +34,7 @@ public class BrowserManager extends BasePage // create browser manager class inh
         }
 
         driver.get(loadProp.getProperty("url"));
+       // driver.manage().window().maximize();
 
     }
 

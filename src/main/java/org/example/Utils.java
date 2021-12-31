@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -78,5 +79,11 @@ public class Utils extends BrowserManager // create method inherit browser manag
         Select select_y=new  Select( driver.findElement(by));
         select_y.selectByIndex(Integer.parseInt(y));
     }
+
+    public void VerifyCurrentUrl(String Url_Name)
+    {
+        Assert.assertTrue(driver.getCurrentUrl().equals(Url_Name));
+    }
+
 
 }
